@@ -1,738 +1,421 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
-
 <meta charset="utf-8">
+<meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+<meta
+        name="description"
+        content="A fictional educational movie website inspired by Molly's Game."
+    >
+<title>Molly's Game | Verlyne Polycarpe</title>
 
-<title>Molly's Game, Verlyne Polycarpe</title>
-
+<!-- Google Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
+<link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet"
+    >
 <style>
-
-/* =========================
-   GENERAL
-========================= */
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
-
 body {
-	background: #080909;
-	color: #f5f5f5;
-	font-family: Arial, Helvetica, sans-serif;
-
-	cursor: url("images/poker-chip-cursor.png") 32 32, auto;
+    background: #080909;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+	background: linear-gradient( rgba(0, 0, 0, .30), rgba(0, 0, 0, .45) ), url("molly-background.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-attachment: fixed;
+	cursor: url("poker-chip-cursor.png.png"),auto;
 }
-
+img {
+    max-width: 100%;
+    display: block;
+}
 a {
-	cursor: url("images/poker-chip-cursor.png") 32 32, pointer;
+    color: inherit;
 }
-
-wrapper {
-	display: block;
-	width: 100%;
+a:focus-visible, iframe:focus-visible {
+outline: 3px solid #d7192f;
+outline-offset: 4px;
 }
-
-
-/* =========================
-   HEADER
-========================= */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 90px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    background: linear-gradient( rgba(0, 0, 0, .85), transparent );
+}
+.logo {
+    font-family: "Instrument Serif", serif;
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.logo span {
+    color: #d7192f;
+}
+nav {
+    display: flex;
+    gap: 35px;
+}
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    transition: color .3s ease;
+}
+nav a:hover {
+    color: #d7192f;
+}
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 8% 70px;
+    overflow: hidden;
+    background-image: linear-gradient( rgba(0, 0, 0, .05), rgba(0, 0, 0, .45) ), url("images/molly-background.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30%;
+    background: linear-gradient( transparent, rgba(0, 0, 0, .95) );
+    z-index: 1;
+    pointer-events: none;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+.hero-content p {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #ddd;
+}
+.description {
+    background: #080909;
+    padding: 120px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 100px;
+    align-items: center;
+}
+.description-title p {
+    color: #d7192f;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+.description-title h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: .9;
+    letter-spacing: -1px;
+}
+.description-text {
+    border-left: 2px solid #d7192f;
+    padding-left: 30px;
+}
+.description-text p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+.description-text strong {
+    color: #d7192f;
+}
+.movie-info {
+    background: #0d1210;
+    border-top: 1px solid #242824;
+    border-bottom: 1px solid #242824;
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.info-box {
+    padding-left: 20px;
+    border-left: 2px solid #6f0d16;
+    transition: border-color .3s ease;
+}
+.info-box:hover {
+    border-left-color: #d7192f;
+}
+.info-title {
+    color: #d7192f;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.info-value {
+    color: #eee;
+    font-family: "Instrument Serif", serif;
+    font-size: 23px;
+}
+.feature {
+    min-height: 700px;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.feature-content {
+    width: 100%;
+    max-width: 900px;
+}
+.small-title {
+    color: #d7192f;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+.feature h2 {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(55px, 8vw, 90px);
+    font-weight: 400;
+    line-height: .85;
+    margin-bottom: 25px;
+}
+.feature h2 span {
+    color: #d7192f;
+}
+.red-line {
+    width: 70px;
+    height: 2px;
+    background: #d7192f;
+    margin: 30px auto;
+}
+.video-container {
+    width: 800px;
+    max-width: 90vw;
+    margin: 35px auto 0;
+    border: 1px solid #6f0d16;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .7);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+footer {
+    min-height: 110px;
+    padding: 30px 8%;
+    background: #050606;
+    border-top: 1px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer-logo {
+    font-family: "Instrument Serif", serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.footer-logo span {
+    color: #d7192f;
+}
+.footer-text {
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1px;
+    max-width: 650px;
+    line-height: 1.7;
+}
 
 header {
-	position: absolute;
-
-	top: 0;
-	left: 0;
-
-	width: 100%;
-	height: 90px;
-
-	padding: 0 60px;
-
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	z-index: 10;
-
-	background: linear-gradient(
-		rgba(0,0,0,.85),
-		transparent
-	);
+    min-height: auto;
+    padding: 25px;
+    flex-direction: column;
+    gap: 20px;
 }
-
-.logo {
-	font-family: "Instrument Serif", serif;
-
-	font-size: 27px;
-	font-weight: 400;
-
-	letter-spacing: 2px;
-}
-
-.logo span {
-	color: #d7192f;
-}
-
 nav {
-	display: flex;
-	gap: 35px;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 nav a {
-	color: #f5f5f5;
-
-	text-decoration: none;
-
-	font-size: 11px;
-
-	letter-spacing: 3px;
-
-	transition: .3s ease;
+    font-size: 9px;
+    letter-spacing: 2px;
 }
-
-nav a:hover {
-	color: #d7192f;
-}
-
-
-/* =========================
-   HERO / POSTER
-========================= */
-
 .hero {
-	min-height: 100vh;
-
-	position: relative;
-
-	display: flex;
-	align-items: flex-end;
-
-	padding: 0 8% 70px;
-
-	overflow: hidden;
-
-	background-image:
-		linear-gradient(
-			rgba(0,0,0,.05),
-			rgba(0,0,0,.45)
-		),
-		url("images/molly-background.webp");
-
-	background-size: cover;
-
-	background-position: center top;
-
-	background-repeat: no-repeat;
+    min-height: 90vh;
+    padding: 0 30px 60px;
+    background-position: center top;
 }
-
-.hero:after {
-	content: "";
-
-	position: absolute;
-
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	height: 25%;
-
-	background: linear-gradient(
-		transparent,
-		rgba(0,0,0,.95)
-	);
-
-	z-index: 1;
-
-	pointer-events: none;
-}
-
-.hero-content {
-	position: relative;
-
-	z-index: 2;
-
-	max-width: 500px;
-}
-
 .hero-content p {
-	font-size: 11px;
-
-	letter-spacing: 4px;
-
-	color: #ddd;
+    font-size: 9px;
+    letter-spacing: 3px;
 }
-
-
-/* =========================
-   DESCRIPTION
-========================= */
-
 .description {
-	background: #080909;
-
-	padding: 120px 10%;
-
-	display: grid;
-
-	grid-template-columns: 1fr 1.5fr;
-
-	gap: 100px;
-
-	align-items: center;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 80px 30px;
 }
-
-.description-title p {
-	color: #d7192f;
-
-	font-size: 12px;
-
-	letter-spacing: 4px;
-
-	margin-bottom: 20px;
-}
-
 .description-title h2 {
-	font-family: "Instrument Serif", serif;
-
-	font-size: 75px;
-
-	font-weight: 400;
-
-	line-height: .9;
-
-	letter-spacing: -1px;
+    font-size: 55px;
 }
-
 .description-text {
-	border-left: 2px solid #d7192f;
-
-	padding-left: 30px;
+    padding-left: 20px;
 }
-
-.description-text p {
-	color: #aaa;
-
-	font-size: 16px;
-
-	line-height: 1.8;
-
-	margin-bottom: 25px;
-}
-
-.description-text strong {
-	color: #d7192f;
-}
-
-
-/* =========================
-   MOVIE DETAILS
-========================= */
-
 .movie-info {
-	background: #0d1210;
-
-	border-top: 1px solid #242824;
-
-	border-bottom: 1px solid #242824;
-
-	padding: 60px 10%;
-
-	display: grid;
-
-	grid-template-columns: repeat(4, 1fr);
-
-	gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 30px;
 }
-
-.info-box {
-	padding-left: 20px;
-
-	border-left: 2px solid #6f0d16;
-
-	transition: .3s ease;
-}
-
-.info-box:hover {
-	border-left-color: #d7192f;
-}
-
-.info-title {
-	color: #d7192f;
-
-	font-size: 10px;
-
-	letter-spacing: 3px;
-
-	margin-bottom: 10px;
-}
-
-.info-value {
-	color: #eee;
-
-	font-family: "Instrument Serif", serif;
-
-	font-size: 23px;
-}
-
-
-/* =========================
-   TRAILER
-========================= */
-
 .feature {
-	min-height: 700px;
-
-	padding: 100px 20px;
-
-	display: flex;
-
-	align-items: center;
-
-	justify-content: center;
-
-	text-align: center;
-
-	background:
-		linear-gradient(
-			rgba(0,0,0,.80),
-			rgba(0,0,0,.95)
-		),
-		url("images/molly-background.webp");
-
-	background-size: cover;
-
-	background-position: center;
-
-	background-attachment: fixed;
+    min-height: 550px;
+    padding: 70px 20px;
+    background-attachment: scroll;
 }
-
-.feature-content {
-	width: 100%;
-
-	max-width: 900px;
-}
-
-.small-title {
-	color: #d7192f;
-
-	font-size: 12px;
-
-	letter-spacing: 5px;
-
-	margin-bottom: 20px;
-}
-
 .feature h2 {
-	font-family: "Instrument Serif", serif;
-
-	font-size: clamp(55px, 8vw, 90px);
-
-	font-weight: 400;
-
-	line-height: .85;
-
-	margin-bottom: 25px;
+    font-size: 60px;
 }
-
-.feature h2 span {
-	color: #d7192f;
-}
-
-.red-line {
-	width: 70px;
-
-	height: 2px;
-
-	background: #d7192f;
-
-	margin: 30px auto;
-}
-
-
-/* =========================
-   VIDEO
-========================= */
-
 .video-container {
-	width: 800px;
-
-	max-width: 90vw;
-
-	margin: 35px auto 0;
-
-	border: 1px solid #6f0d16;
-
-	box-shadow:
-		0 15px 40px rgba(0,0,0,.7);
-
-	overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
-
-.video-container iframe {
-	width: 100%;
-
-	height: 450px;
-
-	display: block;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
 footer {
-	min-height: 110px;
-
-	padding: 30px 8%;
-
-	background: #050606;
-
-	border-top: 1px solid #222;
-
-	display: flex;
-
-	align-items: center;
-
-	justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
 }
-
-.footer-logo {
-	font-family: "Instrument Serif", serif;
-
-	font-size: 25px;
-
-	letter-spacing: 2px;
-}
-
-.footer-logo span {
-	color: #d7192f;
-}
-
-.footer-text {
-	color: #666;
-
-	font-size: 10px;
-
-	letter-spacing: 1px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media screen and (max-width: 800px) {
-
-	header {
-		height: auto;
-
-		padding: 25px;
-
-		flex-direction: column;
-
-		gap: 20px;
-	}
-
-	nav {
-		gap: 15px;
-
-		flex-wrap: wrap;
-
-		justify-content: center;
-	}
-
-	nav a {
-		font-size: 9px;
-
-		letter-spacing: 2px;
-	}
-
-
-	.hero {
-		min-height: 90vh;
-
-		padding: 0 30px 60px;
-
-		background-position: center top;
-	}
-
-
-	.description {
-		grid-template-columns: 1fr;
-
-		gap: 45px;
-
-		padding: 80px 30px;
-	}
-
-	.description-title h2 {
-		font-size: 55px;
-	}
-
-	.description-text {
-		padding-left: 20px;
-	}
-
-
-	.movie-info {
-		grid-template-columns: 1fr 1fr;
-
-		padding: 50px 30px;
-	}
-
-
-	.feature {
-		min-height: 550px;
-
-		padding: 70px 20px;
-
-		background-attachment: scroll;
-	}
-
-	.feature h2 {
-		font-size: 60px;
-	}
-
-
-	.video-container {
-		width: 100%;
-
-		max-width: 100%;
-	}
-
-	.video-container iframe {
-		height: 250px;
-	}
-
-
-	footer {
-		flex-direction: column;
-
-		gap: 15px;
-
-		text-align: center;
-	}
-
-}
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-@media screen and (max-width: 480px) {
-
-	.movie-info {
-		grid-template-columns: 1fr;
-	}
-
-	.hero {
-		background-position: center top;
-	}
-
-	.description-title h2 {
-		font-size: 48px;
-	}
-
-	.feature h2 {
-		font-size: 50px;
-	}
-
-}
-
 </style>
-
 </head>
 
-
 <body>
-
-<wrapper>
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
-	<div class="logo">
-		MOLLY'S <span>GAME</span>
-	</div>
-
-	<nav>
-
-		<a href="#home">HOME</a>
-
-		<a href="#about">ABOUT</a>
-
-		<a href="#details">DETAILS</a>
-
-		<a href="#trailer">TRAILER</a>
-
-	</nav>
-
+  <div class="logo"> MOLLY'S <span>GAME</span> </div>
+  <nav aria-label="Main navigation"> <a href="#home">HOME</a> <a href="#about">ABOUT</a> <a href="#details">DETAILS</a> <a href="#trailer">TRAILER</a> </nav>
 </header>
-
-
 <main>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero" id="home">
-
-	<div class="hero-content">
-
-		<p>
-			A STORY OF AMBITION • RISK • POWER
-		</p>
-<img src="molly-background.webp"
-	{background-size;contain;
-	 }
-	 
-	 
-	 
-	</div>
-
-</section>
-
-
-<!-- =========================
-     ABOUT / STORY
-========================= -->
-
-<section class="description" id="about">
-
-	<div class="description-title">
-
-		<p>
-			01 / THE STORY
-		</p>
-
-		<h2>
-			EVERYONE<br>
-			HAS A TELL.
-		</h2>
-
-	</div>
-
-
-	<div class="description-text">
-
-		<p>
-			Molly Bloom, a former Olympic-class skier,
-			finds herself running one of the most exclusive
-			underground poker games in the world.
-		</p>
-
-		<p>
-			Her games attract celebrities, athletes,
-			business leaders and powerful players.
-			What begins as a small game becomes a
-			multi-million-dollar operation.
-		</p>
-
-		<p>
-			When the FBI begins investigating her operation,
-			Molly must fight to protect her name, her business,
-			and the people who trusted her.
-		</p>
-
-		<p>
-			<strong>
-				Every game has a price.
-			</strong>
-		</p>
-
-	</div>
-
-</section>
-
-
-<!-- =========================
-     MOVIE DETAILS
-========================= -->
-
-<section class="movie-info" id="details">
-
-	<div class="info-box">
-
-		<p class="info-title">
-			RELEASE
-		</p>
-
-		<p class="info-value">
-			2017
-		</p>
-
-	</div>
-
-
-	<div class="info-box">
-
-		<p class="info-title">
-			DIRECTOR
-		</p>
-
-		<p class="info-value">
-			Aaron Sorkin
-		</p>
-
-	</div>
-
-
-	<div class="info-box">
-
-		<p class="info-title">
-			GENRE
-		</p>
-
-		<p class="info-value">
-			Drama / Crime
-		</p>
-
-	</div>
-
-
-	<div class="info-box">
-
-		<p class="info-title">
-			RUNTIME
-		</p>
-
-		<p class="info-value">
-			2h 20m
-		</p>
-
-	</div>
-
-</section>
-
-
-<!-- =========================
-     TRAILER
-========================= -->
-
-<section class="feature" id="trailer">
-
-	<div class="feature-content">
-
-		<p class="small-title">
-			WATCH THE TRAILER
-		
+  <section
+            class="hero"
+            id="home"
+            aria-labelledby="hero-title"
+        >
+    <div class="hero-content">
+      <p id="hero-title"> A STORY OF AMBITION • RISK • POWER </p>
+    </div>
+  </section>
+  <section
+            class="description"
+            id="about"
+            aria-labelledby="story-heading"
+        >
+    <div class="description-title">
+      <p> 01 / THE STORY </p>
+      <h2 id="story-heading"> EVERYONE<br>
+        HAS A TELL. </h2>
+    </div>
+    <div class="description-text">
+      <p> Molly Bloom, a former Olympic-class skier,
+        finds herself running one of the most exclusive
+        underground poker games in the world. </p>
+      <p> Her games attract celebrities, athletes,
+        business leaders and powerful players.
+        What begins as a small game becomes a
+        multi-million-dollar operation. </p>
+      <p> When the FBI begins investigating her operation,
+        Molly must fight to protect her name, her business,
+        and the people who trusted her. </p>
+      <p> <strong> Every game has a price. </strong> </p>
+    </div>
+  </section>
+  <section
+            class="movie-info"
+            id="details"
+            aria-label="Movie details"
+        >
+    <div class="info-box">
+      <p class="info-title"> RELEASE </p>
+      <p class="info-value"> 2017 </p>
+    </div>
+    <div class="info-box">
+      <p class="info-title"> DIRECTOR </p>
+      <p class="info-value"> Aaron Sorkin </p>
+    </div>
+    <div class="info-box">
+      <p class="info-title"> GENRE </p>
+      <p class="info-value"> Drama / Crime </p>
+    </div>
+    <div class="info-box">
+      <p class="info-title"> RUNTIME </p>
+      <p class="info-value"> 2h 20m </p>
+    </div>
+  </section>
+  <section
+            class="feature"
+            id="trailer"
+            aria-labelledby="trailer-heading"
+        >
+    <div class="feature-content">
+      <p class="small-title"> WATCH THE TRAILER </p>
+      <h2 id="trailer-heading"> THE GAME <br>
+        <span>IS ON.</span> </h2>
+      <div class="red-line"></div>
+      <div class="video-container">
+        <iframe
+                        src="https://www.youtube-nocookie.com/embed/Vu4UPet8Nyc?si=C1gHT-yui406nExw&amp;start=3"
+                        title="Molly's Game official trailer"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-logo"> MOLLY'S <span>GAME</span> </div>
+  <div class="footer-text">
+    <p> &copy; 2026, Verlyne Polycarpe. </p>
+    <p> This is a fictitious web page created solely
+      for the purpose of education and training.
+      All products and people associated with this
+      web page are also fictitious. Any resemblance
+      to real brands, products, or people is purely
+      coincidental. Information provided about the
+      product is also fictitious and should not be
+      construed to be representative of actual
+      products on the market in a similar product
+      category. </p>
+    <p> MOVIE WEB DESIGN PROJECT • VERLYNE POLYCARPE </p>
+  </div>
+</footer>
+</body>
+</html>
