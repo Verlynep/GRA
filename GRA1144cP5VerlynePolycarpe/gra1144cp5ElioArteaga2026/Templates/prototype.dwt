@@ -1,54 +1,141 @@
+
 <!doctype html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
+
 <!-- TemplateBeginEditable name="doctitle" -->
-<title>Terri Clark | Home | Elio Arteaga, 2026</title>
+<title>Majid Jordan | Home | Verlyne Polycarpe, 2026</title>
 <!-- TemplateEndEditable -->
-<link href="../styles.css" rel="stylesheet" type="text/css">
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+
 <!-- TemplateBeginEditable name="head" -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 <!-- TemplateEndEditable -->
+
 </head>
 
 <body>
+
 <wrapper>
-  <header> <img src="file:///C:/Users/Administrator/Downloads/GRA1144cP5VerlynePolycarpe/gra1144cp5ElioArteaga2026/ovosoundtoplogo.png"
-    
+
+<!-- HEADER -->
+
+<header>
+
+    <img class="logo" src="images/ovosoundtoplogo.png"
+         alt="OVO Sound logo">
+
     <h1>Majid Jordan</h1>
-  </header>
-  <nav>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
     <ul>
-      <a href="../index.html">
-      <li id="home">Home</li>
-      </a> <a href="../news.html">
-      <li>News</li>
-      </a> <a href="../store.html">
-      <li>Store</li>
-      </a> <a href="../videos.html">
-      <li>Videos</li>
-      </a> <a href="../tour.html">
-      <li>Tour</li>
-      </a> <a href="../gallery.html">
-      <li>Gallery</li>
-      </a> <a href="../email.html">
-      <li>Email</li>
-      </a> <a href="../merch.html">
-      <li>Merch</li>
-      </a> <a href="../blog.html">
-      <li>Blog</li>
-      </a> <a href="../privacy.html">
-      <li>Privacy</li>
-      </a>
+        <li id="home"><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="tour.html">Tour</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="email.html">Email</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
     </ul>
-  </nav>
-  <!-- TemplateBeginEditable name="EditRegion1" -->
-  <main>
-    <h2>Home</h2>
-  </main>
-  <!-- TemplateEndEditable -->
-  <footer>
-    <p>&copy; 2026, Verlyne Polycarpe. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
-  </footer>
+
+</nav>
+
+
+<!-- TemplateBeginEditable name="EditRegion1" -->
+
+<main id="home">
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <p class="eyebrow">MUSIC • ART • CULTURE</p>
+
+        <h2>MAJID<br>JORDAN</h2>
+
+        <p class="hero-description">
+            The sound of modern R&B.
+            Explore the music and creative world
+            of Majid Jordan.
+        </p>
+
+        <a class="button" href="videos.html">
+            EXPLORE MUSIC
+        </a>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="introduction">
+
+        <p class="eyebrow">GET TO KNOW THE DUO</p>
+
+        <h2>ABOUT MAJID JORDAN</h2>
+
+        <p>
+            Majid Jordan is a Canadian R&B duo consisting
+            of Majid Al Maskati and Jordan Ullman.
+            Known for atmospheric production, distinctive
+            vocals and a contemporary sound, the duo has
+            established a unique presence in modern R&B.
+        </p>
+
+    </section>
+
+
+    <!-- FEATURED MUSIC -->
+
+    <section class="featured">
+
+        <p class="eyebrow">EXPLORE THE SOUND</p>
+
+        <h2>FEATURED MUSIC</h2>
+
+        <p>
+            Discover the music, visuals and artistry
+            behind Majid Jordan.
+        </p>
+
+        <a class="button" href="store.html">
+            DISCOVER MORE
+        </a>
+
+    </section>
+
+</main>
+
+<!-- TemplateEndEditable -->
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        &copy; 2026, Verlyne Polycarpe.
+        This is an unofficial educational fan website
+        created solely for educational purposes.
+        Not affiliated with or endorsed by Majid Jordan
+        or OVO Sound.
+    </p>
+
+</footer>
+
 </wrapper>
+
 </body>
 </html>
