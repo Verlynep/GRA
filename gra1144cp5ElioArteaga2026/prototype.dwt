@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Majid Jordan | Home | Verlyne Polycarpe, 2026</title>
+
+    <!-- Main Stylesheet -->
+    <link href="Templates/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <img
+            class="logo"
+            src="Templates/images/ovosoundtoplogo.png"
+            alt="OVO Sound logo"
+        >
+
+        <h1>Majid Jordan</h1>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav aria-label="Main navigation">
+
+        <ul>
+            <li id="home"><a href="Templates/index.html" aria-current="page">Home</a></li>
+            <li><a href="Templates/news.html">News</a></li>
+            <li><a href="Templates/store.html">Store</a></li>
+            <li><a href="Templates/videos.html">Videos</a></li>
+            <li><a href="Templates/tour.html">Tour</a></li>
+            <li><a href="Templates/gallery.html">Gallery</a></li>
+            <li><a href="Templates/email.html">Email</a></li>
+            <li><a href="Templates/merch.html">Merch</a></li>
+            <li><a href="Templates/blog.html">Blog</a></li>
+            <li><a href="Templates/privacy.html">Privacy</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <!-- TemplateBeginEditable name="EditRegion1" -->
+
+    <main id="main-content">
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <p class="eyebrow">MUSIC &bull; ART &bull; CULTURE</p>
+
+            <h2>MAJID<br>JORDAN</h2>
+
+            <p class="hero-description">
+                The sound of modern R&amp;B.
+                Explore the music and creative world
+                of Majid Jordan.
+            </p>
+
+            <a class="button" href="Templates/videos.html">
+                EXPLORE MUSIC
+            </a>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="introduction">
+
+            <p class="eyebrow">GET TO KNOW THE DUO</p>
+
+            <h2>ABOUT MAJID JORDAN</h2>
+
+            <p>
+                Majid Jordan is a Canadian R&amp;B duo consisting
+                of vocalist Majid Al Maskati and producer
+                Jordan Ullman. Known for atmospheric production,
+                distinctive vocals, and a contemporary sound,
+                the duo has established a unique presence
+                in modern R&amp;B.
+            </p>
+
+        </section>
+
+
+        <!-- FEATURED MUSIC -->
+
+        <section class="featured">
+
+            <p class="eyebrow">EXPLORE THE SOUND</p>
+
+            <h2>FEATURED MUSIC</h2>
+
+            <p>
+                Discover the music, visuals, and artistry
+                behind Majid Jordan.
+            </p>
+
+            <a class="button" href="Templates/store.html">
+                DISCOVER MORE
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- TemplateEndEditable -->
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026, Verlyne Polycarpe.
+            This is an unofficial educational fan website
+            created solely for educational purposes.
+            Not affiliated with or endorsed by Majid Jordan
+            or OVO Sound.
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
