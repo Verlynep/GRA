@@ -6,21 +6,46 @@
 <style type="text/css">
 body {
     margin: 0;
-    background-color: #FFFFFF;
+    background-color: white;
 }
+#colors button {
+    width: 50px;
+    margin: 10px;
+    border-radius: 25px;
+    border: thin #000000  solid;
+    height: 50px;
+}
+#colors  button:hover {
+    border-color: #000000;
+}
+
 wrapper {
     width: 1366px;
     margin: auto;
     display: block;
-    background-color: #FFFFFF;
+    background-color: white
+}
+#colors {
 }
 header {
-    background-color: #FFFFFF;
-    color: #FFFFFF;
+    background-color: white
+		;
+    color: black
+		;
+}
+#bronze-btn   {
+    background-color: #AB8470;
+}
+#plum-btn {
+    background-color: #963453;
+}
+#black-btn {
+    background-color: #050505;
 }
 main {
     display: grid;
-	grid-template-columns: 48.5% 48.5;gap:16px;
+	grid-template-columns: 48% 48%;
+	gap:16px;
 	
 }
 #apperal {
@@ -56,6 +81,13 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
 </script>
 </head>
 
@@ -65,7 +97,27 @@ function MM_swapImage() { //v3.0
     <h1></h1>
     <main>
       <section id="apperal"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dress-black','','back noir dg copy.webp',1)"><img id="dress-black" src="dg front noir copy.webp" alt="Dress Black"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dress-bronze','','back dg - tan.webp',1)"><img id="dress-bronze" src="front dg tan.webp" alt="Dress Bronze"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('dress-plum','','back dg plum copy.webp',1)"><img id="dress-plum" src="front dg plum copy.webp" alt="Dress Plum"></a></section>
-      <section id="description"></section>
+      <section id="description">
+        <h2>Marini Drop Waist Dress</h2>
+        <p>A fresh take on our signature Marini Corset. Crafted in smooth satin, the Marini Drop Waist Dress features a sculpted corset bodice with structured seaming, delicate halter straps, and signature hook-and-eye detailing down the front. A lace-up back cinches the waist, while a dropped waistline gives way to a softly flared mini skirt for a feminine, romantic finish</p>
+        <h3> $288
+	    </h3>
+        <div id="colors">
+  <button id="black-btn" onClick="MM_showHideLayers('dress-black','','show','dress-bronze','','hide','dress-plum','','hide')"></button>
+  <button id="bronze-btn" onClick="MM_showHideLayers('dress-black','','hide','dress-bronze','','show','dress-plum','','hide')"></button>
+          <button id="plum-btn" onClick="MM_showHideLayers('dress-black','','hide','dress-bronze','','hide','dress-plum','','show')"></button>
+        </div>
+        <h3>colors
+		 </h3>
+        <h3>size</h3>
+        <div id="sizes">
+          <button>XXS</button>
+          <button>XS</button>
+          <button>S</button>
+        </div>
+        <button>add to cart
+		  </button>
+      </section>
     </main>
     <footer></footer>
   </header>
